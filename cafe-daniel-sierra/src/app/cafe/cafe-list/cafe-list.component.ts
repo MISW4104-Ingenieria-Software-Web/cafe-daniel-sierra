@@ -37,4 +37,11 @@ export class CafeListComponent implements OnInit {
       this.getCafes();
     }
 
+    countCafeOrigen() {
+      return this.cafes.filter(cafe => cafe.tipo == "Café de Origen").length;
+    }
+    countCafeBlend() {
+      return this.cafes.filter(cafe => cafe.tipo == "Blend").length;
+    }
+
 }
